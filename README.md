@@ -1,12 +1,17 @@
 # lotr-battle
 
-# Je n'ai pas réussi à rendre mon projet fonctionnel, je compte réussir pour la deuxième partie grâce à tes différents retours. Merci de ta compréhension.
-
-# Fonctionnalités souhaitées : créer un personnage, modifier/supprimer uniquement un personnage créé, afficher le vainqueur entre les deux combattants choisies 
+### Je n'ai pas réussi à rendre mon projet fonctionnel, je compte réussir pour la deuxième partie grâce à tes différents retours. Merci de ta compréhension.
+```
+Fonctionnalités souhaitées : créer un personnage, modifier/supprimer uniquement un personnage créé, afficher le vainqueur entre les deux combattants choisies 
+```
+### Installer bootstrap
+```
+npm install bootstrap
+```
 
 ## Project setup
 ```
-npm install
+npm install 
 ```
 
 ### Compiles and hot-reloads for development
@@ -39,9 +44,7 @@ npm run test:e2e
 npm run test:unit
 ```
 
-### Installer bootstrap
-```
-npm install bootstrap
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
