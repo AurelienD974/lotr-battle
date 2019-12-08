@@ -42,46 +42,89 @@ import Perso from '@/models/perso';
 import Persos from '@/store/modules/persos.ts'
 import '@/store/index.ts'
 import axios from 'axios'
+import Vuex, { mapState } from 'vuex'
+import persos from '@/store/modules/persos.ts';
 // import func from '../../../vue-temp/vue-editor-bridge';
+export default new Vuex.Store({
+    state: {
+    persos: [], 
+    
+  },
+  actions: {
+    
+    loadPersos ({ commit }) {
+      axios
+        .get('https://ringsdb.com/api/public/cards/')
+        .then(r => r.data)
+        .then(persos => {
+        console.log(persos)
+              commit('setPersos', {persos: persos})
+        })
+     
 
-export default Vue.extend({
-data(){
-        return{
-            persos: [],
+    },
+    created: function() {
+  this.persos.dispatch('loadPersos')
+}
+    
+  },
+ 
+  mutations: {
+    
+    // load(state, payload: { name: string, traits : string, health: number, attack: number }) {
+    //   state.persos.push({
+    //       id: getRandomId(),
+    //     name: payload.name,
+    //     traits: payload.traits,
+    //     health: payload.health,
+    //     attack: payload.attack,
+       
+    //   });
+   setPersos(state, payload) {
+  state.persos = payload.persos;
+},
+
+  }
+})
+
+// export default Vue.extend({
+// data(){
+//         return{
+//             persos: [],
          
-        }
+//         }
       
  
-    },
+//     },
 
-    mounted(){
-        this.getPerso()
-    },
-    methods:{
+//     mounted(){
+//         this.getPerso()
+//     },
+//     methods:{
 
 
-getPerso: function(){
+// getPerso: function(){
 
-  axios.get(`https://ringsdb.com/api/public/cards/`)
-  .then((result) => {
-      console.log(result)
+//   axios.get(`https://ringsdb.com/api/public/cards/`)
+//   .then((result) => {
+//       console.log(result)
 
-      this.persos = result.data
+//       this.persos = result.data
       
   
-  })
-  .catch((error => {
-      console.log(error)
-  }))
-},
-fight(): void{
+//   })
+//   .catch((error => {
+//       console.log(error)
+//   }))
+// },
+// fight(): void{
 
-let winner = document.createElement('H1')
-winner.innerHTML = "winner : "
+// let winner = document.createElement('H1')
+// winner.innerHTML = "winner : "
 
   
-}
-},
+// }
+// },
 
-});
+// });
 </script>
