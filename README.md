@@ -1,6 +1,6 @@
 # lotr-battle
 
-### Je n'ai pas réussi à rendre mon projet fonctionnel, je compte réussir pour la deuxième partie grâce à tes différents retours. Merci de ta compréhension.
+### Je n'ai pas réussi à rendre mon projet fonctionnel
 ```
 Fonctionnalités souhaitées : créer un personnage, modifier/supprimer uniquement un personnage créé, afficher le vainqueur entre les deux combattants choisies 
 ```
