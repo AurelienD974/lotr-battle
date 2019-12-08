@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <FightPersos />
+    <FightPersos/>
 <br>
       <CreatePerso />
       <br>
@@ -26,8 +26,8 @@
         <tr v-for="(perso, index) in persos" v-if="index <= 18" :key="perso.code">
         
           
-          <td>{{ perso.name }}</td>
-          <td>{{ perso.traits }}</td>
+          <td class=".name">{{ perso.name }}</td>
+          <td class=".traits">{{ perso.traits }}</td>
           <td class="health">{{ perso.health }}</td>
           <td class="attack">{{ perso.attack }}</td>
          
